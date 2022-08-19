@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <link rel="shortcut icon" href="Imagenes/FICLOUD.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">FICLOUD</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Inicio</span>
+        </a>
+         <span class="tooltip">Inicio</span>
+      </li>
+      <li>
+       <a href="quienessomos.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Nosotros</span>
+       </a>
+       <span class="tooltip">Nosotros</span>
+     </li>
+     <li>
+       <a href="servicios.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Servicios</span>
+       </a>
+       <span class="tooltip">Servicios</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Compra</span>
+       </a>
+       <span class="tooltip">Compra</span>
+     </li>
+  </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+   <header>
+
+    <div class="contenedor">
+        <div class="marca">
+            <h1><span class="resaltado">Ficloud</span>
+                Nube de datos</h1>
+        </div>
+    </div>
+
+</header>
+<div class="fecha">
+    <script>
+        var date=new Date();var d=date.getDate();var day=(d<10)?'0'+d:d;var m=date.getMonth()+1;var month=(m<10)?'0'+m:m;var yy=date.getYear();var year=(yy<1000)?yy+1900:yy;document.write(day+"/"+month+"/"+year);
+        </script>
+</div>
+<section id="cabecera">
+    <font face="verdana"><h1> Expertos en seguridad y almacenamiento informatico</h1>
+        
+    </div>
+</section>
+<section id="cajas">
+    <div class="contenedor">
+        <div class="caja">
+            <img src="imagenes/padlock-308589_1280.png">
+
+        
+
+            <h3> Seguridad </h3>
+            <p> Se toma como prioridad no solo el almacenamiento tambien la seguridad</p>
+            <div class="caja"><img src="imagenes/hard-drive-1110813_1280.png">
+                <h3> almacenamiento</h3>
+                <p>Alojado en servidores de alta calidad.</p></font>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p> FICLOUD, Copyright &copy; 2022</p>
+    
+</footer>
+</body>
+</html>

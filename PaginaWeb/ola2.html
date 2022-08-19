@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bienvenido a mi página oficial</title>
+<meta charset="utf-8">
+<meta name="viewport content="width=device-width">
+<meta name="description" content="Desarrollo web">
+<meta name="keywords" content="diseño web,desarrollo web,pagina oficial">
+<meta name="author" content="Sandra Cruz">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+<header>
+<div class="contenedor">
+<div class="marca">
+	<h1><span class="resaltado">Software House </span>  Diseño y desarrollo web </h1>
+	<nav>
+		<ul>
+			<li class="actual"><a href="index.html">inicio </a></li>
+			<li class="actual"><a href="quienessomos.html">Quienes somos</a></li>
+			<li class="actual"><a href="servicios.html">Servicios </a></li>
+			<li class="actual"><a href="contactenos1.html">Contactenos </a></li>
+		</ul>
+	</nav>
+</div>
+</header>
+<section id="boletin">
+<div class="contenedor">
+<h1>Contactenos</h1>
+</div>
+</section>
+<section id="principal">
+<div class="contenedor">
+<article id="col-principal">
+<h1> Formulario de Solicitud de servicios</h1>
+<form name="formulario" class=method="post" action="registrar.php">
+	<label> Nombre </label>
+	<input type="text" name="nombre" placeholder="Ingrese su nombre completo" required><br>
+	<label> Email   </label>    
+	<input type="text" name="email" placeholder="Ingrese su correo electrónico" required><br>
+	<label> Telefóno </label>
+	<input type="text" name="telefono" placeholder="Ingrese su telefono" required>
+	<br>
+	<label> Solicitud</label>
+	<textarea name="solicitud" required></textarea><br>
+	<input type="submit" value="Enviar">
+</form>
+</article>
+</div>
+</section>
+<br>
+<br>
+<footer>
+<p> Software House, Copyright &copy; 2022 </p>
+ </footer>
+</body>
+</html>

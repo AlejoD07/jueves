@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="width=device-width">
+    <meta name="keywords" content="Desarrollo web">
+    <meta name="author" content="Alejandro Diaz">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <link rel="shortcut icon" href="Imagenes/FICLOUD.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Ficloud</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <link rel="shortcut icon" href="Imagenes/FICLOUD.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<style>
+    .contenedor {
+      font-family: tahoma;
+    }
+  </style>
+    
+<body>
+   
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">FICLOUD</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Inicio</span>
+        </a>
+         <span class="tooltip">Inicio</span>
+      </li>
+      <li>
+       <a href="quienessomos.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Nosotros</span>
+       </a>
+       <span class="tooltip">Nosotros</span>
+     </li>
+     <li>
+       <a href="servicios.html">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Servicios</span>
+       </a>
+       <span class="tooltip">Servicios</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Compra</span>
+       </a>
+       <span class="tooltip">Compra</span>
+     </li>
+  </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+    <header>
+        <div class="contenedor">
+            <div class="marca">
+                <h1><span class="resaltado">Ficloud</span>
+                    Nube de datos</h1>
+            </div>
+        </div>
+    </header>
+    <div class="fecha">
+        <script>
+            var date=new Date();var d=date.getDate();var day=(d<10)?'0'+d:d;var m=date.getMonth()+1;var month=(m<10)?'0'+m:m;var yy=date.getYear();var year=(yy<1000)?yy+1900:yy;document.write(day+"/"+month+"/"+year);
+            </script>
+    </div>
+    <section id="boletin">
+        <div class="contenedor">
+            <font face="verdana"><h1>Contactenos</h1>
+        </div>
+    </section>
+    <section id="principal">
+        <div class="contenedor">
+            <article id="form">
+                <h1> Formulario de solicitud de servicios</h1>
+                <form>
+                    <label> Nombre </label>
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre completo"><br>
+                    <label> Email </label>
+                    <input type="text" name="email" placeholder="Ingrese su correo electronico"><br>
+                    <label> Telefono </label>
+                    <input type="text" name="telefono" placeholder="Ingrese su telefono"><br>
+                    <label> Solicitud</label>
+                    <textarea></textarea><br>
+                    <input type="submit" value="Enviar"></font>
+                    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4791.734647206551!2d-75.1517852311997!3d4.401906605457715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38daac36ef33ef%3A0xc4167c4b60b14a15!2sSENA%20Centro%20de%20Industria%20y%20de%20la%20Construcci%C3%B3n!5e0!3m2!1ses-419!2sco!4v1655125819862!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </form>
+            </article>
+        </div>
+    </section>
+   
+    <footer>
+        <p> FICLOUD, Copyright &copy; 2022</p>
+    </footer>
+</body>
+
+</html>
